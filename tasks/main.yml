@@ -1,0 +1,15 @@
+---
+
+- name: "main | Install python{{ ansible_python.version.major }}-pip"
+  package:
+    name: "python{{ ansible_python.version.major }}-pip"
+
+- name: main | Install psycopg2-binary with pip
+  pip:
+    name: psycopg2-binary
+
+# Manage databases
+- include: dbs.yml
+
+# Manage users
+- include: users.yml
