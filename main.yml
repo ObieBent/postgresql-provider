@@ -1,7 +1,7 @@
 ---
 
 # Manage databases
-- include: dbs.yml
+- include_tasks: dbs.yml
 
 # Manage users
-- include: users.yml
+- include_tasks: users.yml
